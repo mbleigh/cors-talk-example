@@ -1,0 +1,7 @@
+source :rubygems
+
+gem 'sinatra'
+gem 'redis'
+gem 'rack-cors', require: 'rack/cors'
+gem 'faraday'
+gem 'multi_json'

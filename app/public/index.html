@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>CORS SOA Example - RubyConf 2012</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/divshot-util.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+
+    <script src="js/jquery.js"></script>
+    <style type='text/css'>
+      body .signed-in {
+        display: none;
+      }
+
+      body.signed-in .signed-in {
+        display: block;
+      }
+      body.signed-in .signed-out {
+        display: none;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">SOA in the Browser!</a>
+          <div class="navbar-content">
+            <ul class="nav  pull-right">
+              <li>
+                <a href="http://mbleigh.github.com/cors-talk">Talk Slides</a> 
+              </li>
+              <li class="signed-in">
+                <a onclick="javascript:app.logout()">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="content">
+      <div class='signed-out'>
+        <div class="hero-unit">
+          <h1>You Need to Sign In!</h1>
+          <p>You can't use an app if you aren't logged in.</p>
+          <p>
+            <a id='sign-in' class="btn btn-large btn-info" href="http://localhost:3001/"><span class="btn-label">Sign in with Twitter</span></a> 
+          </p>
+        </div>
+      </div>
+      <div class='signed-in'>
+        <div class="row">
+          <div class="span4">
+            <form class="form-vertical" id="activity-form">
+              <div class="control-group">
+                <label class="control-label">Status</label>
+                <div class="controls">
+                  <input type="text" class="input-large" name="activity"> 
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Update Status</button>
+            </form>
+          </div>
+          <div class="span8" id="activities">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type='text/javascript' src="js/application.js"></script>
+  </body>
+</html>
